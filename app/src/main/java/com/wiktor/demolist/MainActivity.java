@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     int x = Integer.parseInt(editTextNumber.getText().toString());
                     numberList.add(x);
                 } else if ((editTextNumber.getText().toString().equals(""))) {
-                    myList.setText("null");
+                    myList.setText("Введите число");
                 }
 
                 break;
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 myList.setText("");
                 if (myList.getText().toString().equals("")) {
                     for (int elements : numberList) {
-                        textFromList.append(elements).append(", ").append("\n");
+                        textFromList.append(elements).append(", ");
                     }
                     myList.setText(textFromList);
                     textFromList.delete(0, textFromList.length());
