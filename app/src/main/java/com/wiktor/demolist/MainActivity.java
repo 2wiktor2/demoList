@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.b_remove:
                 if (numberList.size() != 0) {
-                    numberList.remove(0);
+                    numberList.remove(numberList.size()-1);
                 }
 
                 break;
