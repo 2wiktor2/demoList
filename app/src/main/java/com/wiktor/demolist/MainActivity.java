@@ -1,7 +1,7 @@
 package com.wiktor.demolist;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends FragmentActivity implements View.OnClickListener {
 
     EditText editTextNumber;
     Button add, remove, print, reset;
@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     ArrayList <Integer> numberList = new ArrayList <>();
     StringBuffer textFromList = new StringBuffer();
+
 
 
     @Override
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.b_remove:
                 if (numberList.size() != 0) {
-                    numberList.remove(numberList.size()-1);
+                    numberList.remove(numberList.size() - 1);
                 }
 
                 break;
@@ -71,7 +72,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 break;
             case R.id.b_reset:
-                myList.setText(null);
+                numberList.clear();
+                myList.setText("Список пуст");
                 break;
         }
 
